@@ -32,7 +32,7 @@ storyblokInit({
   components
 });
 
-const Layout = ({ children, locale, locales, defaultLocale }) => {
+const Layout = ({ children, location }) => {
   return (
     <div>
       {/* <Navigation

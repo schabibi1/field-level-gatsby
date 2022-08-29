@@ -38,7 +38,7 @@ module.exports = {
         accessToken: 'ssvoWQOS6KQ9FQv4R9Gw7wtt',
         version: process.env.NODE_ENV === 'production' ? 'published' : 'draft',
         localAssets: true, // Optional parameter to download the images to use with Gatsby Image Plugin
-        languages: ['ja'] // Optional parameter. Omission will retrieve all languages by default.
+        languages: ['en', 'ja'] // Optional parameter. Omission will retrieve all languages by default.
       }
     }
     // this (optional) plugin enables Progressive Web App + Offline functionality

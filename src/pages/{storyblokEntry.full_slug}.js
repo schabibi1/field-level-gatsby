@@ -5,11 +5,11 @@ import { StoryblokComponent, storyblokEditable, useStoryblokState } from "gatsby
 
 import Layout from "../components/layout"
 
-const StoryblokEntry = ({ data, location, locale, locales, defaultLocale }) => {
+const StoryblokEntry = ({ data, location }) => {
   let story = data.storyblokEntry
   story = useStoryblokState(story, {
     resolveRelations: ["featured-posts.posts", "selected-posts.posts"],
-    language: locale,
+    // language: locale,
   })
 
   const Templates = () => {
@@ -20,7 +20,7 @@ const StoryblokEntry = ({ data, location, locale, locales, defaultLocale }) => {
   }
 
   return (
-    <Layout location={location} locale={locale} locales={locales} defaultLocale={defaultLocale}>
+    <Layout location={location}>
       <div {...storyblokEditable(story.content)}>
         <Templates blok={story.content} key={story.content._uid} />
       </div>
